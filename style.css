@@ -1,0 +1,11 @@
+html { height: 101%; }
+body { background: black ;}
+video { max-width: 100%; height: auto; }
+h1 { font-family: "Calisto MT", Georgia, serif; font-size: 20px; margin-bottom: 1px; color: white;  }
+#wrapper { 
+	display: block; 
+	max-width: 800px; 
+	margin: 0 auto; 
+	background: black; 
+	text-align: center;
+}

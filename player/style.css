@@ -1,0 +1,35 @@
+* { margin: 0; padding: 0; outline: none; }
+
+html { height: 101%; }
+body { background: #90b4f0 url('images/bg.png'); font-size: 61.5%; line-height: 1; padding-bottom: 80px; font-family: Arial, Tahoma, sans-serif; }
+img { border: 0; max-width: 100%; }
+
+video { max-width: 100%; height: auto; }
+
+h1 { font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif; font-size: 2.6em; line-height: 1.4em; margin-bottom: 1px; color: #555; font-weight: normal; }
+p { margin-bottom: 14px; font-size: 1.3em; line-height: 1.2em; color: #679ad3; font-weight: bold; }
+
+/** core body **/
+#wrapper { 
+	display: block; 
+	max-width: 700px; 
+	margin: 0 auto; 
+	background: #fff; 
+	margin-top: 45px; 
+	padding: 11px 14px;
+	text-align: center;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+/* smaller window/screen media query */
+@media screen and (max-width: 715px) {
+	body { padding-bottom: 60px; }
+	h1 { font-size: 2.1em; }
+	
+	#wrapper {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}

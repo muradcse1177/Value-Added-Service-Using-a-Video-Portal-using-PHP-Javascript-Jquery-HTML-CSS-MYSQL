@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title></title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">		
+		<video  width="640" height="480" controls preload>
+		 <source src="a.mp4" type="video/mp4"></source>
+		</video>
+		<h1>Variable is now playing</h1>
+	</div>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+	$("video").on("click", function(){
+		if(this.paused == true) {
+			this.play();
+		} else {
+			this.pause();
+		}
+	}); // end video click handler
+	
+	$("html").on("keydown", function(e){
+		var kcode = (e.keyCode ? e.keyCode : e.which);
+		var viddy = $("video")[0];
+		
+		if(kcode == 32) {
+			// if space bar stop default scrolling and start/stop video player
+			e.preventDefault();
+			
+			if(viddy.paused == true) {
+				viddy.play();
+			} else {
+				viddy.pause();
+			}
+		} // end if keycode logic
+	}); // end keydown event handler
+});
+</script>
+</body>
+</html>
